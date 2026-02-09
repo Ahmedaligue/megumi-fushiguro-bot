@@ -26,7 +26,7 @@ global.multiplier = 60
 global.prefix = /^[./!#?]/
 
 global.channel = 'https://whatsapp.com/channel/0029Vb6BDQc0lwgsDN1GJ31i'
-global.md = 'https://github.com/El-brayan502/NagiBotV3'
+global.md = 'https://github.com/El-brayan502/megumi-fushiguro-bot'
 global.ch = { id: '120363417186717632@newsletter' }
 
 let file = fileURLToPath(import.meta.url)
