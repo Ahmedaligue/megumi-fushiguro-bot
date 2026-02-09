@@ -123,8 +123,8 @@ END:VCARD`
           {
             name: 'quick_reply',
             buttonParamsJson: JSON.stringify({
-              display_text: '📋 Menú',
-              id: `${usedPrefix}menu`
+              display_text: '👤 Registrarme',
+              id: `${usedPrefix}reg user.19`
             })
           }
         ],
