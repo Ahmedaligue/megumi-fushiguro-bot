@@ -64,15 +64,14 @@ END:VCARD`
         businessOwnerJid: '0@s.whatsapp.net',
 
         caption: `
-✨ *Bienvenido/a al grupo* ✨
+*Bienvenido/a al grupo*
 
-👤 Usuario: ${taguser}
-🌎 País: Desconocido
-👥 Miembros totales: ${totalMembers}
-📅 Fecha: ${date}
+> Usuario: ${taguser}
+> Miembros totales: ${totalMembers}
+> Fecha: ${date}
 `.trim(),
 
-        footer: `© ${botname} · Welcome`,
+        footer: `© Welcome to the group`,
 
         // 🔘 BOTÓN REGISTRO
         interactiveButtons: [
