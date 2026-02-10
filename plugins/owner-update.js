@@ -9,7 +9,7 @@ let handler = async (m, { conn, text }) => {
 
     await conn.reply(
       m.chat,
-      `🛠️ *ACTUALIZACIÓN DEL BOT*\n\n${out.trim() || '✅ Actualizado correctamente'}`,
+      `🛠️ *تحديث البوت*\n\n${out.trim() || '✅ تم التحديث بنجاح'}`,
       m,
       rcanal
     )
@@ -19,7 +19,7 @@ let handler = async (m, { conn, text }) => {
     await m.react('❌')
     await conn.reply(
       m.chat,
-      `⚠️ *Error al actualizar*\n\n${e.message}`,
+      `⚠️ *خطأ أثناء التحديثr*\n\n${e.message}`,
       m,
       rcanal
     )
