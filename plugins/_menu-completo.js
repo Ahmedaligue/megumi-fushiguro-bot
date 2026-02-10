@@ -22,40 +22,40 @@ let handler = async (m, { conn, usedPrefix }) => {
     businessOwnerJid: who || '0@s.whatsapp.net',
 
     caption: `
-👤 Usuario: ${taguser}
+👤 المستخدم: ${taguser}
 
-*+ MENU DOWNLOADER*
-> ${usedPrefix}play (name)
-> ${usedPrefix}ig (url)
-> ${usedPrefix}instagram (url)
-> ${usedPrefix}fb (url)
-> ${usedPrefix}facebook (url)
-> ${usedPrefix}soundcloud (texto)
+*+ قائمة التحميل*
+> ${usedPrefix}play (اسم الأغنية)
+> ${usedPrefix}ig (رابط)
+> ${usedPrefix}instagram (رابط)
+> ${usedPrefix}fb (رابط)
+> ${usedPrefix}facebook (رابط)
+> ${usedPrefix}soundcloud (نص)
 
-*+ MENU OWNER*
+*+ قائمة المطوّر*
 > ${usedPrefix}update 
 > ${usedPrefix}cleartmp 
 > ${usedPrefix}detectar
 
-*+ MENU MAKER*
+*+ قائمة الإنشاء*
 > ${usedPrefix}s
 > ${usedPrefix}sticker
 
-*+ MENU GRUPO*
-> ${usedPrefix}kick (@tag)
+*+ قائمة المجموعة*
+> ${usedPrefix}kick (@منشن)
 > ${usedPrefix}link
 `.trim(),
 
     title: '',
     subtitle: '',
-    footer: `© megumi · menu`,
+    footer: `© أحمد · القائمة`,
 
     interactiveButtons: [
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({
           display_text: 'channel',
-          url: 'https://whatsapp.com/channel/0029Vb6BDQc0lwgsDN1GJ31i'
+          url: 'https://whatsapp.com/channel/0029Vb6YJqq0lwgzYNWVN21u'
         })
       }
     ],
