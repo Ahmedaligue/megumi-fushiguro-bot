@@ -227,14 +227,14 @@ function isRestricted(m, user, chat, isROwner, botId, usedPrefix, pluginName) {
     // Chat baneado
     if (pluginName !== "group-banchat.js" && chat.isBanned) {
         if (!chat.primaryBot || chat.primaryBot === botId) {
-            m.reply(`💙 El bot está desactivado en este grupo.\nUsa *${usedPrefix}bot on* para activar.`)
+            m.reply(`💙 البوت غير مفعل في هذه المجموعة.\nاستخدم *${usedPrefix}bot on* لتفعيله.`)
             return true
         }
     }
     
     // Usuario baneado
     if (user.banned) {
-        m.reply(`🖤 Estás baneado.\n*Razón:* ${user.bannedReason}`)
+       m.reply(`🖤 تم حظرك.\n*السبب:* ${user.bannedReason}`)
         return true
     }
     return false
@@ -318,13 +318,13 @@ async function finalizeHandler(m) {
 
 global.dfail = (type, m, conn) => {
     const msg = {
-        rowner: `💙 El comando *${global.comando}* solo puede ser usado por los creadores del bot.`,
-        owner: `💙 El comando *${global.comando}* solo puede ser usado por el dueño.`,
-        premium: `💙 El comando *${global.comando}* solo puede ser usado por los usuarios premium.`,
-        group: `💙 El comando *${global.comando}* solo puede ser usado en grupos.`,
-        admin: `💙 El comando *${global.comando}* solo puede ser usado por los administradores del grupo.`,
-        botAdmin: `💙 Para ejecutar el comando *${global.comando}* debo ser administrador del grupo.`
-    }[type]
+    rowner: `💙 الأمر *${global.comando}* لا يمكن استخدامه إلا من طرف مطوّري البوت.`,
+    owner: `💙 الأمر *${global.comando}* لا يمكن استخدامه إلا من طرف مالك البوت.`,
+    premium: `💙 الأمر *${global.comando}* لا يمكن استخدامه إلا من طرف المستخدمين المميزين (Premium).`,
+    group: `💙 الأمر *${global.comando}* لا يمكن استخدامه إلا داخل المجموعات.`,
+    admin: `💙 الأمر *${global.comando}* لا يمكن استخدامه إلا من طرف مدراء المجموعة.`,
+    botAdmin: `💙 لتنفيذ الأمر *${global.comando}* يجب أن يكون البوت مديراً في المجموعة.`
+}[type]
     if (msg) return conn.reply(m.chat, msg, m, global.rcanal).then(_ => m.react('💢'))
 }
 
