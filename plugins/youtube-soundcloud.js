@@ -42,7 +42,7 @@ async function resolveStreamUrl(transcodingUrl, trackAuthorization) {
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   const query = (text?.trim() || args?.join(' ') || '').trim()
-  if (!query) return m.reply(`Uso: ${usedPrefix + command} <búsqueda soundcloud>`)
+  if (!query) return m.reply(`الاستخدام: ${usedPrefix + command} <بحث في ساوند كلاود>`)
 
   await conn.sendMessage(m.chat, {
     react: { text: "🕘", key: m.key }
@@ -88,7 +88,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
       await conn.sendMessage(m.chat, {
         react: { text: "✖️", key: m.key }
       }).catch(() => {})
-      return m.reply('No encontré resultados reproducibles para esa búsqueda.')
+      return m.reply('❌ لم أجد نتائج قابلة للتشغيل لهذا البحث.')
     }
 
     const track = results[0]
@@ -128,6 +128,6 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
 handler.help = ['soundcloud <query>']
 handler.tags = ['downloader']
-handler.command = ['soundcloud', 'sc']
+handler.command = ['soundcloud', 'ستت']
 
 export default handler
