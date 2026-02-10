@@ -6,28 +6,26 @@ import moment from 'moment-timezone'
 
 global.botNumber = '' 
 global.owner = [
-  ['573244278232', 'Neji ssj', true],
-  ['50231458537', 'BrayanX330', true],
-  ['573229506110','DuarteXV',true]
-  ['51941658192','Perro',true]
+  ['212625457341', 'ahmed aligue', true],
+  ['⁦212724459421','Daru_sama',true]
 ]
 global.mods = []
 global.prems = []
-global.suittag = ['50231458537']
+global.suittag = ['212625457341']
 
-global.botname = '🐺 megumi fushiguro'
-global.author = 'Brayan330'
-global.sticker = 'sticker created by megumi'
+global.botname = 'senku tst'
+global.author = 'ahmed aligue'
+global.sticker = 'sticker created by senku'
 
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots'
-global.moneda = 'dolares'
+global.moneda = 'dolar'
 global.multiplier = 60
 global.prefix = /^[./!#?]/
 
-global.channel = 'https://whatsapp.com/channel/0029Vb6BDQc0lwgsDN1GJ31i'
-global.md = 'https://github.com/El-brayan502/megumi-fushiguro-bot'
-global.ch = { id: '120363417186717632@newsletter' }
+global.channel = 'https://whatsapp.com/channel/0029Vb6YJqq0lwgzYNWVN21u'
+global.md = 'https://www.instagram.com/aa18.aligue'
+global.ch = { id: '120363405848897016@newsletter' }
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
