@@ -65,7 +65,7 @@ const yt = {
 
 let handler = async (m, { conn, args }) => {
   if (!args.length) {
-    return m.reply('🎵 *Usa:* .play nombre de la canción')
+    return m.reply('🎵 *استخدم:* .play اسم الأغنية')
   }
 
   try {
@@ -75,7 +75,7 @@ let handler = async (m, { conn, args }) => {
     const search = await yts(query)
 
     if (!search.videos.length) {
-      return m.reply('❌ No se encontraron resultados')
+      return m.reply('❌ لم يتم العثور على نتائج')
     }
 
     const video = search.videos[0]
@@ -84,13 +84,12 @@ let handler = async (m, { conn, args }) => {
       m.chat,
       {
         image: { url: video.thumbnail },
-        caption:
-`*°${video.title}*
-Canal : ${video.author.name}
-Duración : ${video.timestamp}
-Vistas : ${video.views.toLocaleString()}
+        caption: `*°${video.title}*
+القناة : ${video.author.name}
+المدة : ${video.timestamp}
+المشاهدات : ${video.views.toLocaleString()}
 
-> Preparando tu descarga...`
+> جاري تجهيز التحميل...`
       },
       { quoted: m }
     )
@@ -113,12 +112,12 @@ Vistas : ${video.views.toLocaleString()}
 
   } catch (e) {
     console.error(e)
-    m.reply('❌ Error al reproducir la canción')
+    return m.reply('❌ لم يتم العثور على نتائج')
   }
 }
 
 handler.help = ['play <texto>']
 handler.tags = ['music']
-handler.command = ['play', 'p']
+handler.command = ['play', 'شغل']
 
 export default handler
